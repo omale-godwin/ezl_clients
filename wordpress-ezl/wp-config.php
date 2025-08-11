@@ -113,12 +113,6 @@ define( 'BLOG_ID_CURRENT_SITE', 1 );
 define('WP_MEMORY_LIMIT', '256M');
 define('WP_MAX_MEMORY_LIMIT', '512M');
 
-define( 'MULTISITE', true );
-define( 'SUBDOMAIN_INSTALL', true );
-define( 'DOMAIN_CURRENT_SITE', 'merkaba.site' );
-define( 'PATH_CURRENT_SITE', '/' );
-define( 'SITE_ID_CURRENT_SITE', 1 );
-define( 'BLOG_ID_CURRENT_SITE', 1 );
 define('COOKIE_DOMAIN', '.merkaba.site');  // For shared login
 
 /* That's all, stop editing! Happy publishing. */
