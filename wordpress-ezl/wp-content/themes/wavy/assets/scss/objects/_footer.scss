@@ -1,0 +1,118 @@
+/* @group Footer */
+
+#footer{
+    margin-top: 80px;
+    padding: 40px 0 40px;
+    min-height: inherit;
+    background: $boxes-bg-color;
+    border-top: 1px solid $boxes-border-color;
+    &.no-background{
+        background: none;
+        margin-top: 20px;
+        padding: 0;
+        border: 0;
+        .sticky-logo{ display: none; }
+    }
+	.widgets{	
+        margin-top: -40px;      
+        .default-sidebar{
+            display: flex;
+            flex-flow: row wrap;
+        }
+        .title.bordered{
+            margin-bottom: 35px;
+        }
+        .epcl-row{
+            display: flex;
+            flex-flow: row wrap;
+        }
+        .widget{
+            border: 0;
+            border-left: 1px solid $boxes-border-color;
+            background: none;
+            margin-top: 60px;
+            padding-left: 80px;
+            border-radius: 0;
+            &.widget_epcl_subscribe_form{
+                width: 40%;
+            }
+            &:nth-child(3n+1){
+                border: 0;
+            }
+            
+        }
+        .default-sidebar, .mobile-sidebar{
+            display: flex;
+            flex-flow: row wrap;
+        }
+        .widget_text a{
+            font-weight: bold;
+        }
+    }
+    
+    .logo{
+        margin-bottom: 20px;
+        a{
+            display: inline-block;
+            color: $black;
+            font-size: 40px;
+            &:hover{
+                transform: translateY(-3px);
+            }
+        }
+        &.text-logo{
+            .title{ font-size: 40px; }
+            a{
+                display: flex;
+                justify-content: center;
+            }
+            .icon{
+                width: 30px;
+                line-height: 30px;
+                margin: auto 7px auto 0px;
+                svg{
+                    fill: $main-color;
+                }
+            }
+        }
+	}
+
+	#back-to-top{
+		position: fixed;
+		right: -10px;
+		bottom: 10px;
+		text-align: center;
+		z-index: 99;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+        padding: 0;
+        font-size: 25px;
+        opacity: 0;
+        border-radius: 100%;
+        cursor: pointer;
+        img{ vertical-align: middle; }
+        i.fa{ margin: 0; }
+        &.visible{
+            opacity: 1;
+            right: 10px;
+            bottom: 10px;
+        }
+    }
+    .epcl-border{ margin: 0; }
+	.published{
+        text-align: center;
+        padding: 20px;
+        font-size: 15px;
+        a{
+            font-weight: 700;
+        }
+        svg.icon{
+            margin: 0 4px;
+        }        
+    }
+}
+
+
+/* @end */

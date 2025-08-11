@@ -1,0 +1,180 @@
+/* @group Forms */
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+input[type="url"],
+input[type="search"],
+textarea,
+select,
+.inputbox{
+	display: block;
+    background: $input-bg-color;
+    border: 1px solid transparent;
+    color: $text-color;
+    font-size: 14px;
+    font-family: $title-font-family;
+    line-height: 1.8;
+    letter-spacing: 0.25px;
+    padding: 15px 25px;
+	height: 45px;
+	width: 100%;
+	margin-bottom: 15px;
+    box-sizing: border-box;
+    outline: 0;
+    border: 1px solid $border-color;
+    border-radius: $small-border-radius;
+	@include transition;
+	@include placeholder{
+        color: $titles-color;
+        color: #667995;
+	};
+    &:focus{ 
+        border-color: darken(#e6edf6, 5%);
+    }
+}
+.inputbox{
+    &.rounded{
+        border-radius: $large-border-radius;
+    }
+    &.large{
+        height: 54px;
+        padding: 15px 35px;
+        font-size: 15px;
+        letter-spacing: 0.5px;
+    }
+}
+textarea{
+    width: 100%;
+    height: 170px;
+    resize: none;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+input[type="submit"], button[type="submit"]{
+    @include button;
+    background: $main-gradient;
+    font-family: $title-font-family;
+    font-size: 18px;
+    padding: 12px 35px;
+    font-weight: 600;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    @include transition;
+    &:before{
+        content: '';
+        @include absolute-element;
+        background: $main-gradient;
+        transform: scaleX(-1);
+        z-index: -1;
+    }
+    &:after{
+        content: '';
+        position: absolute;
+        left: -352px;
+        top: 100%;
+        background: url($assets_path+'/images/wave-button.svg') repeat-x;
+        width: 704px;
+        height: 50%;
+        z-index: 2;
+        opacity: 0.4;
+        @include transition;
+        animation: wave_button 7s cubic-bezier(0.55,0.5,0.45,0.5) infinite;      
+        animation-play-state: paused;
+    }
+    &:hover{
+        &:after{
+            animation-play-state: running;
+            top: 60%;
+        }
+    }
+}
+
+select{
+    max-width: 100%;
+    height: auto;
+    border: 0;
+	padding-right: 25px;
+    background: $input-bg-color url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAUBAMAAABohZD3AAAAA3NCSVQICAjb4U/gAAAAD1BMVEX///8AAAAAAAAAAAAAAABRO2rwAAAABXRSTlMAESIzRJTdRHwAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAcdEVYdFNvZnR3YXJlAEFkb2JlIEZpcmV3b3JrcyBDUzbovLKMAAAAY0lEQVQYlVXOyRGAIBBE0QYNgIMBWJYBcDAAFvOPSYRZ5zL1Tv3xvPY6dueC4JyA27AB2IzzMIx/4hDW6Sg+p8EJfVESCpkTEpkSGpMSshg6DkmoxlHHOaFbjoTiHHR83UX/A5M3KIMZPyPWAAAAAElFTkSuQmCC') no-repeat 97% center !important;
+	background-size: 9px 6px !important;
+    border: 1px solid $border-color;
+	font: $font-size $font-family;
+	outline: 0;
+	cursor: pointer;
+    appearance: none;
+    option{
+        color: #222;
+        background: #fff;
+    }
+}
+button{
+	@include transition;
+}
+
+form p{ padding-bottom: 15px; font-size: 15px; }
+
+// Search Form
+
+form.search-form{
+    position: relative;
+    z-index: 1;
+    display: flex;
+    input.search-field{
+        margin-bottom: 0;
+        border-radius: $small-border-radius 0 0 $small-border-radius;
+    }
+    .submit{
+        color: $white;
+        flex: 0 0 auto;
+        box-shadow: none !important;
+        backface-visibility: hidden;
+        border-radius: 0 $small-border-radius $small-border-radius 0;
+    }
+    // .submit:hover{ opacity: .75; }
+}
+
+/* @end */
+
+/* @group Contact Form 7 Basic Support */
+
+.wpcf7{
+	p{ padding: 0 !important; margin-bottom: $grid-gap;  }
+	label{ @extend .title; @extend .usmall; }
+    span.wpcf7-form-control-wrap{ display: block; margin-top: half($grid-gap); }
+    span.wpcf7-not-valid-tip{
+        color: $main-color;    
+        font-size: 0.9em;
+    }
+	.ajax-loader{
+		margin-left: half($grid-gap) !important;
+		vertical-align: baseline !important;
+	}
+    .wpcf7-spinner{
+        background: $main-gradient;
+        opacity: 1;
+    }
+	.wpcf7-response-output{
+		clear: both;
+		border: 0 !important;
+		background: $main-color;
+		color: #fff;
+		padding: 10px 15px !important;
+		font-size: 16px;
+		text-align: center;
+		margin: 0 0 $grid-gap !important;
+		position: relative;
+        border-radius: $small-border-radius;
+		&.wpcf7-mail-sent-ok{
+			background: #13ab51;
+		}
+	}
+    form.sent{
+        .wpcf7-response-output{
+            background: #13ab51;
+        }
+    }
+}
+
+/* @end */

@@ -1,0 +1,302 @@
+/*------------------------------------*\
+    			SETTINGS
+\*------------------------------------*/
+/* @group Colors */
+:root {
+  --epcl-font-family: "Be Vietnam Pro", sans-serif;
+  --epcl-title-font-family: "Be Vietnam Pro", sans-serif;
+  --epcl-sidebar-title-font-family: "Be Vietnam Pro", sans-serif;
+  --epcl-sidebar-title-font-weight: 800;
+  --epcl-main-color: #F43676;
+  --epcl-third-color: #AEF3FF;
+  --epcl-decoration-color: #F7DFD4;
+  --epcl-titles-color: #302D55;
+  --epcl-black: #002050;
+  --epcl-background-color: #fff;
+  --epcl-sections-color: #FFF9F3;
+  --epcl-content-background-color: #FFFACD;
+  --epcl-boxes-background-color: #FFF9F3;
+  --epcl-boxes-border-color: #FFE7D2;
+  --epcl-boxes-border-radius: 15px;
+  --epcl-code-color: #F9FBFF;
+  --epcl-border-color: #E6EDF6;
+  --epcl-gradient-start-color: #FC6668;
+  --epcl-gradient-end-color: #E10489;
+  --epcl-gradient-color: linear-gradient(103deg, var(--epcl-gradient-start-color) 0%, var(--epcl-gradient-end-color) 100%);
+  --epcl-boxes-shadow: 2px 2px 3px 0px rgba(93,112,234,0.1);
+  --epcl-small-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.15);
+  --epcl-medium-shadow: 0px 8px 16px -8px rgba(0, 0, 0, 0.30), 0px 13px 27px -5px rgba(50, 50, 93, 0.25);
+  --epcl-transition-bezier: cubic-bezier(.5,2.5,.7,.7);
+}
+
+/* @group Font Families */
+/* @end */
+/* @end */
+/* @group Effects speed */
+/* @end */
+/* @group Content Width and Margins */
+/* @end */
+/* Slider */
+.slick-loading .slick-list {
+  outline: 0;
+}
+
+/* Arrows */
+.slick-prev,
+.slick-next {
+  font-size: 0;
+  line-height: 0;
+  position: absolute;
+  top: 50%;
+  display: block;
+  width: 35px;
+  height: 35px;
+  padding: 0;
+  text-align: center;
+  line-height: 35px;
+  -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  cursor: pointer;
+  color: #fff;
+  border: none;
+  outline: none;
+  background: var(--epcl-gradient-color);
+  border-radius: 30px;
+  z-index: 10;
+  overflow: hidden;
+}
+
+.slick-prev:after,
+.slick-next:after {
+  content: '';
+  position: absolute;
+  left: -352px;
+  top: 100%;
+  background: url("../images/wave-button.svg") repeat-x;
+  width: 704px;
+  height: 50%;
+  z-index: 2;
+  opacity: 0.4;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  -webkit-animation: wave_button 4s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+          animation: wave_button 4s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+.outer-arrows .slick-prev, .top-arrows .slick-prev, .outer-arrows
+.slick-next, .top-arrows
+.slick-next {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../images/right-arrow-white.svg") no-repeat center center;
+  background-size: 15px;
+}
+
+.slick-prev:before {
+  background: url("../images/left-arrow-white.svg") no-repeat center center;
+  background-size: 15px;
+}
+
+.outer-arrows .slick-prev {
+  top: 40%;
+  left: -10px;
+}
+
+.outer-arrows .slick-next {
+  top: 40%;
+  right: -10px;
+}
+
+.top-arrows .slick-prev {
+  left: auto;
+  right: 80px;
+  top: -60px;
+  -webkit-transform: none;
+      -ms-transform: none;
+          transform: none;
+}
+
+.top-arrows .slick-next {
+  right: 20px;
+  top: -60px;
+  -webkit-transform: none;
+      -ms-transform: none;
+          transform: none;
+}
+
+.top-arrows .slick-prev:hover, .top-arrows .slick-next:hover {
+  -webkit-transform: translate(-2px, -2px);
+      -ms-transform: translate(-2px, -2px);
+          transform: translate(-2px, -2px);
+}
+
+.bottom-arrows .slick-prev {
+  top: auto;
+  left: auto;
+  right: 40px;
+  bottom: 5px;
+  -webkit-transform: none;
+      -ms-transform: none;
+          transform: none;
+}
+
+.bottom-arrows .slick-next {
+  top: auto;
+  right: 0px;
+  bottom: 5px;
+  -webkit-transform: none;
+      -ms-transform: none;
+          transform: none;
+}
+
+.slick-slider .slick-arrow.slick-disabled {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.slick-prev {
+  left: 20px;
+}
+
+.slick-next {
+  right: 20px;
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+  background-color: var(--epcl-main-color);
+}
+
+.slick-prev:hover:after,
+.slick-next:hover:after {
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+  top: 60%;
+}
+
+.slick-prev:hover:before,
+.slick-prev:focus:before,
+.slick-next:hover:before,
+.slick-next:focus:before {
+  opacity: 1;
+}
+
+.slick-prev.slick-disabled:before,
+.slick-next.slick-disabled:before {
+  opacity: .25;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+[dir='rtl'] .slick-prev {
+  right: 20px;
+  left: auto;
+  -webkit-transform: rotate(180deg) translateY(50%);
+      -ms-transform: rotate(180deg) translateY(50%);
+          transform: rotate(180deg) translateY(50%);
+}
+
+.slick-prev:before {
+  content: '\f104';
+}
+
+[dir='rtl'] .slick-prev:before {
+  content: '\f105';
+}
+
+[dir='rtl'] .slick-next {
+  right: auto;
+  left: 20px;
+  -webkit-transform: rotate(180deg) translateY(50%);
+      -ms-transform: rotate(180deg) translateY(50%);
+          transform: rotate(180deg) translateY(50%);
+}
+
+.slick-next:before {
+  content: '\f105';
+}
+
+[dir='rtl'] .slick-next:before {
+  content: '\f104';
+}
+
+[dir='rtl'] .outer-arrows .slick-prev {
+  right: 0px;
+}
+
+[dir='rtl'] .outer-arrows .slick-next {
+  left: 0px;
+}
+
+/* Dots */
+.slick-dotted.slick-slider {
+  margin-bottom: 30px;
+}
+
+.slick-dots {
+  position: absolute;
+  bottom: -50px;
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.slick-dots li {
+  position: relative;
+  display: inline-block;
+  margin: 0 7px;
+  padding: 0;
+  cursor: pointer;
+}
+
+.slick-dots li button {
+  border-radius: 10px;
+  font-size: 0;
+  display: block;
+  width: 12px;
+  height: 12px;
+  text-align: center;
+  line-height: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+  background: #DFE2FB;
+  position: relative;
+  -webkit-box-shadow: var(--epcl-medium-shadow);
+          box-shadow: var(--epcl-medium-shadow);
+}
+
+.slick-dots li.slick-active button {
+  opacity: 1;
+  width: 25px;
+  background: var(--epcl-main-color);
+}
+
+.slick-dots li button:hover {
+  opacity: 1;
+}
+
+.slick-slide [data-lazy] {
+  opacity: 0;
+}

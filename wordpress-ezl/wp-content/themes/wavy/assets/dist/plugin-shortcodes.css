@@ -1,0 +1,534 @@
+/*------------------------------------*\
+    			SETTINGS
+\*------------------------------------*/
+/* @group Colors */
+:root {
+  --epcl-font-family: "Be Vietnam Pro", sans-serif;
+  --epcl-title-font-family: "Be Vietnam Pro", sans-serif;
+  --epcl-sidebar-title-font-family: "Be Vietnam Pro", sans-serif;
+  --epcl-sidebar-title-font-weight: 800;
+  --epcl-main-color: #F43676;
+  --epcl-third-color: #AEF3FF;
+  --epcl-decoration-color: #F7DFD4;
+  --epcl-titles-color: #302D55;
+  --epcl-black: #002050;
+  --epcl-background-color: #fff;
+  --epcl-sections-color: #FFF9F3;
+  --epcl-content-background-color: #FFFACD;
+  --epcl-boxes-background-color: #FFF9F3;
+  --epcl-boxes-border-color: #FFE7D2;
+  --epcl-boxes-border-radius: 15px;
+  --epcl-code-color: #F9FBFF;
+  --epcl-border-color: #E6EDF6;
+  --epcl-gradient-start-color: #FC6668;
+  --epcl-gradient-end-color: #E10489;
+  --epcl-gradient-color: linear-gradient(103deg, var(--epcl-gradient-start-color) 0%, var(--epcl-gradient-end-color) 100%);
+  --epcl-boxes-shadow: 2px 2px 3px 0px rgba(93,112,234,0.1);
+  --epcl-small-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.15);
+  --epcl-medium-shadow: 0px 8px 16px -8px rgba(0, 0, 0, 0.30), 0px 13px 27px -5px rgba(50, 50, 93, 0.25);
+  --epcl-transition-bezier: cubic-bezier(.5,2.5,.7,.7);
+}
+
+/* @group Font Families */
+/* @end */
+/* @end */
+/* @group Effects speed */
+/* @end */
+/* @group Content Width and Margins */
+/* @end */
+/* @group Shortcodes */
+/* Icons */
+i.ep-icon {
+  font-style: normal !important;
+}
+
+i.ep-shortcode.ep-icon {
+  margin: 0 3px;
+}
+
+/* Toggle / Accordion */
+.epcl-shortcode.epcl-button {
+  display: inline-block;
+  font-size: 14px;
+  color: #fff;
+  background-color: #FF3152;
+  padding: 7px 25px;
+  text-align: center;
+  margin: 0 2px 5px;
+  border-radius: 8px;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  position: relative;
+  border: 0;
+  font-weight: 400;
+  vertical-align: middle;
+  overflow: hidden;
+}
+
+.epcl-shortcode.epcl-button:after {
+  content: '';
+  position: absolute;
+  left: -352px;
+  top: 100%;
+  background: url("../images/wave-button.svg") repeat-x;
+  width: 704px;
+  height: 50%;
+  z-index: 2;
+  opacity: 0.4;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  -webkit-animation: wave_button 7s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+          animation: wave_button 7s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+.epcl-shortcode.epcl-button:hover:after {
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+  top: 60%;
+}
+
+.epcl-shortcode.epcl-button:hover {
+  color: #fff;
+  -webkit-transform: translateY(-2px);
+      -ms-transform: translateY(-2px);
+          transform: translateY(-2px);
+}
+
+.epcl-shortcode.epcl-button.extra-small {
+  font-size: 10px;
+  padding: 2px 10px;
+}
+
+.epcl-shortcode.epcl-button.small {
+  font-size: 12px;
+  padding: 4px 12px;
+}
+
+.epcl-shortcode.epcl-button.large {
+  font-size: 16px;
+  padding: 9px 30px;
+}
+
+.epcl-shortcode.epcl-button.extra-large {
+  font-size: 22px;
+  padding: 8px 25px;
+}
+
+.epcl-shortcode.epcl-button.extra-large .epcl-icon {
+  margin-right: 10px;
+}
+
+.epcl-shortcode.epcl-button.fluid {
+  display: block;
+  width: auto;
+  clear: both;
+  margin: 20px 0 0;
+  padding: 10px 5%;
+}
+
+.epcl-shortcode.epcl-button.primary-style {
+  background: var(--epcl-gradient-color);
+  overflow: hidden;
+  vertical-align: middle;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.epcl-shortcode.epcl-button.primary-style:after {
+  content: '';
+  position: absolute;
+  left: -352px;
+  top: 100%;
+  background: url("../images/wave-button.svg") repeat-x;
+  width: 704px;
+  height: 50%;
+  z-index: 2;
+  opacity: 0.4;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  -webkit-animation: wave_button 7s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+          animation: wave_button 7s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+.epcl-shortcode.epcl-button.primary-style:hover:after {
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+  top: 60%;
+}
+
+.epcl-shortcode.epcl-button.glow {
+  -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+}
+
+.epcl-shortcode.epcl-button.outline {
+  background: none;
+  color: inherit;
+  border: 2px solid;
+  font-weight: bold;
+  -webkit-transform: none;
+      -ms-transform: none;
+          transform: none;
+  padding: 7px 20px;
+}
+
+.epcl-shortcode.epcl-button.red {
+  background-color: #FF3152;
+}
+
+.epcl-shortcode.epcl-button.red.outline {
+  background: none;
+  border-color: #FF3152;
+  color: #FF3152;
+}
+
+.epcl-shortcode.epcl-button.red.outline:hover {
+  background: #FF3152;
+  color: #fff;
+}
+
+.epcl-shortcode.epcl-button.red.gradient {
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF3152), to(#ff1d41));
+  background: linear-gradient(to bottom, #FF3152 0%, #ff1d41 100%);
+}
+
+.epcl-shortcode.epcl-button.yellow {
+  background-color: #FFD012;
+}
+
+.epcl-shortcode.epcl-button.yellow.outline {
+  background: none;
+  border-color: #FFD012;
+  color: #FFD012;
+}
+
+.epcl-shortcode.epcl-button.yellow.outline:hover {
+  background: #FFD012;
+  color: #fff;
+}
+
+.epcl-shortcode.epcl-button.yellow.gradient {
+  background: -webkit-gradient(linear, left top, left bottom, from(#FFD012), to(#fdcb00));
+  background: linear-gradient(to bottom, #FFD012 0%, #fdcb00 100%);
+}
+
+.epcl-shortcode.epcl-button.orange {
+  background-color: #F39C12;
+}
+
+.epcl-shortcode.epcl-button.orange.outline {
+  background: none;
+  border-color: #F39C12;
+  color: #F39C12;
+}
+
+.epcl-shortcode.epcl-button.orange.outline:hover {
+  background: #F39C12;
+  color: #fff;
+}
+
+.epcl-shortcode.epcl-button.orange.gradient {
+  background: -webkit-gradient(linear, left top, left bottom, from(#F39C12), to(#e5910c));
+  background: linear-gradient(to bottom, #F39C12 0%, #e5910c 100%);
+}
+
+.epcl-shortcode.epcl-button.green {
+  background-color: #27AE60;
+}
+
+.epcl-shortcode.epcl-button.green.outline {
+  background: none;
+  border-color: #27AE60;
+  color: #27AE60;
+}
+
+.epcl-shortcode.epcl-button.green.outline:hover {
+  background: #27AE60;
+  color: #fff;
+}
+
+.epcl-shortcode.epcl-button.green.gradient {
+  background: -webkit-gradient(linear, left top, left bottom, from(#27AE60), to(#239d57));
+  background: linear-gradient(to bottom, #27AE60 0%, #239d57 100%);
+}
+
+.epcl-shortcode.epcl-button.light-blue {
+  background-color: #3498DB;
+}
+
+.epcl-shortcode.epcl-button.light-blue.outline {
+  background: none;
+  border-color: #3498DB;
+  color: #3498DB;
+}
+
+.epcl-shortcode.epcl-button.light-blue.outline:hover {
+  background: #3498DB;
+  color: #fff;
+}
+
+.epcl-shortcode.epcl-button.light-blue.gradient {
+  background: -webkit-gradient(linear, left top, left bottom, from(#3498DB), to(#268fd5));
+  background: linear-gradient(to bottom, #3498DB 0%, #268fd5 100%);
+}
+
+.epcl-shortcode.epcl-button.blue {
+  background-color: #2980B9;
+}
+
+.epcl-shortcode.epcl-button.blue.outline {
+  background: none;
+  border-color: #2980B9;
+  color: #2980B9;
+}
+
+.epcl-shortcode.epcl-button.blue.outline:hover {
+  background: #2980B9;
+  color: #fff;
+}
+
+.epcl-shortcode.epcl-button.blue.gradient {
+  background: -webkit-gradient(linear, left top, left bottom, from(#2980B9), to(#2574a8));
+  background: linear-gradient(to bottom, #2980B9 0%, #2574a8 100%);
+}
+
+.epcl-shortcode.epcl-button.purple {
+  background-color: #9B59B6;
+}
+
+.epcl-shortcode.epcl-button.purple.outline {
+  background: none;
+  border-color: #9B59B6;
+  color: #9B59B6;
+}
+
+.epcl-shortcode.epcl-button.purple.outline:hover {
+  background: #9B59B6;
+  color: #fff;
+}
+
+.epcl-shortcode.epcl-button.purple.gradient {
+  background: -webkit-gradient(linear, left top, left bottom, from(#9B59B6), to(#924dae));
+  background: linear-gradient(to bottom, #9B59B6 0%, #924dae 100%);
+}
+
+.epcl-shortcode.epcl-button.dark {
+  background-color: #34495E;
+}
+
+.epcl-shortcode.epcl-button.dark.outline {
+  background: none;
+  border-color: #34495E;
+  color: #34495E;
+}
+
+.epcl-shortcode.epcl-button.dark.outline:hover {
+  background: #34495E;
+  color: #fff;
+}
+
+.epcl-shortcode.epcl-button.dark.gradient {
+  background: -webkit-gradient(linear, left top, left bottom, from(#34495E), to(#2d3f51));
+  background: linear-gradient(to bottom, #34495E 0%, #2d3f51 100%);
+}
+
+.epcl-shortcode.epcl-button.gray {
+  background-color: #95A5A6;
+}
+
+.epcl-shortcode.epcl-button.gray.outline {
+  background: none;
+  border-color: #95A5A6;
+  color: #95A5A6;
+}
+
+.epcl-shortcode.epcl-button.gray.outline:hover {
+  background: #95A5A6;
+  color: #fff;
+}
+
+.epcl-shortcode.epcl-button.gray.gradient {
+  background: -webkit-gradient(linear, left top, left bottom, from(#95A5A6), to(#8a9c9d));
+  background: linear-gradient(to bottom, #95A5A6 0%, #8a9c9d 100%);
+}
+
+.epcl-shortcode.epcl-button.white {
+  background-color: #ECF0F1;
+  color: #555;
+}
+
+.epcl-shortcode.epcl-button.white.outline {
+  background: none;
+  border-color: #ECF0F1;
+  color: #555;
+  color: #fff;
+}
+
+.epcl-shortcode.epcl-button.white.outline:hover {
+  background: #ECF0F1;
+  color: #555;
+}
+
+.epcl-shortcode.epcl-button.white.gradient {
+  background: -webkit-gradient(linear, left top, left bottom, from(#ECF0F1), to(#e0e7e8));
+  background: linear-gradient(to bottom, #ECF0F1 0%, #e0e7e8 100%);
+}
+
+.epcl-shortcode.epcl-button i.epcl-icon {
+  margin-right: 7px;
+}
+
+.epcl-shortcode.epcl-columns {
+  margin: 0 -10px;
+}
+
+.epcl-shortcode.epcl-columns .epcl-col {
+  margin-bottom: 20px;
+}
+
+.epcl-shortcode.epcl-box {
+  padding: 20px 30px;
+  line-height: 1.8;
+  font-size: 1.05em;
+  margin-bottom: 20px;
+  position: relative;
+  border-radius: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.epcl-shortcode.epcl-box .epcl-icon {
+  color: #fff;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 40px;
+  font-size: 20px;
+}
+
+.epcl-shortcode.epcl-box.error {
+  background: #ffe4e4;
+}
+
+.epcl-shortcode.epcl-box.success {
+  background: #e6f6e8;
+}
+
+.epcl-shortcode.epcl-box.notice {
+  background: #fdf3e0;
+}
+
+.epcl-shortcode.epcl-box.information {
+  background: #d0f1ff;
+}
+
+.epcl-shortcode.epcl-toggle .toggle-title {
+  font-size: 17px;
+  padding: 15px 20px;
+  background-color: #fff;
+  border: 3px solid var(--epcl-border-color);
+  border-radius: 8px;
+  position: relative;
+  margin-bottom: 20px;
+  cursor: pointer;
+  font-weight: 600;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  font-family: var(--epcl-font-family);
+}
+
+.epcl-shortcode.epcl-toggle .toggle-title .epcl-icon {
+  display: block;
+  width: 18px;
+  height: 18px;
+  line-height: 18px;
+  color: var(--epcl-black);
+  font-size: 12px;
+  position: absolute;
+  right: 10px;
+  top: 18px;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+.epcl-shortcode.epcl-toggle.active .toggle-title .epcl-icon, .epcl-shortcode.epcl-toggle.opened .toggle-title .epcl-icon {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.epcl-shortcode.epcl-toggle .toggle-content {
+  display: none;
+  margin-bottom: 20px;
+  padding: 0 15px;
+}
+
+.epcl-shortcode.epcl-toggle.opened .toggle-content {
+  display: block;
+}
+
+.epcl-shortcode.epcl-tabs ul.tab-links {
+  margin-left: 0;
+}
+
+.epcl-shortcode.epcl-tabs ul.tab-links li {
+  display: block;
+  float: left;
+  padding-bottom: 0px;
+  margin-bottom: -3px;
+}
+
+.epcl-shortcode.epcl-tabs ul.tab-links li a {
+  display: block;
+  padding: 10px 15px;
+  list-style: none;
+  margin-right: 3px;
+  word-break: break-word;
+  color: var(--epcl-black);
+  font-weight: 500;
+  position: relative;
+  z-index: 1;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  background-image: none;
+  border: 3px solid transparent !important;
+  border-bottom: 0 !important;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.epcl-shortcode.epcl-tabs ul.tab-links li.active a, .epcl-shortcode.epcl-tabs ul.tab-links li a:hover {
+  background-color: #fff;
+  border-color: var(--epcl-border-color) !important;
+}
+
+.epcl-shortcode.epcl-tabs .tab-container {
+  clear: both;
+  margin-bottom: 25px;
+  padding: 20px;
+  background: #fff;
+  border: 3px solid var(--epcl-border-color);
+  border-radius: 8px;
+  border-top-left-radius: 0;
+  padding-top: 25px;
+}
+
+.epcl-shortcode.epcl-tabs .tab-container p {
+  padding-top: 0;
+  margin-bottom: 20px;
+}
+
+.epcl-shortcode.epcl-tabs .tab-container p:last-of-type {
+  margin-bottom: 0;
+}
+
+.epcl-shortcode.epcl-tabs .tab-container .tab-item {
+  display: none;
+  padding: 0;
+}
+
+/* @end */
