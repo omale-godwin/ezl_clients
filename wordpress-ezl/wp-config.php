@@ -106,19 +106,7 @@ define( 'BLOG_ID_CURRENT_SITE', 1 );
 
 
 
-// Force HTTPS for all URLs
-define('WP_HOME', 'https://' . $_SERVER['HTTP_HOST'] . '/');
-define('WP_SITEURL', 'https://' . $_SERVER['HTTP_HOST'] . '/');
 
-// Additional security for admin/logins
-define('FORCE_SSL_ADMIN', true);
-define('FORCE_SSL_LOGIN', true);
-
-// Handle proxy headers (needed when using Cloudflare)
-if (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https') {
-    $_SERVER['HTTPS'] = 'on';
-    $_SERVER['SERVER_PORT'] = 443;
-}
 
 
 // Increase memory limit
