@@ -89,6 +89,21 @@ networks:
   wordpress-network:
     driver: bridge
 
+volumes:
+  ezl_Clients:
+    driver: local
+    driver_opts:
+      type: none
+      device: ./ezl_Clients
+      o: bind
+
+  rubicon:
+    driver: local
+    driver_opts:
+      type: none
+      device: ./rubicon
+      o: bind
+
 
 
  
