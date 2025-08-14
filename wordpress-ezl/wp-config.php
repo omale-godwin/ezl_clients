@@ -20,7 +20,7 @@
 
 // ** Database settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define( 'DB_NAME', 'EZ' );
+define( 'DB_NAME', 'EZL' );
 
 /** Database username */
 define( 'DB_USER', 'mk_blog' );
@@ -105,8 +105,8 @@ define( 'SITE_ID_CURRENT_SITE', 1 );
 define( 'BLOG_ID_CURRENT_SITE', 1 );
 
 
-define('WP_HOME', 'https://merkaba.site');
-define('WP_SITEURL', 'https://merkaba.site');
+// define('WP_HOME', 'https://merkaba.site');
+// define('WP_SITEURL', 'https://merkaba.site');
 define('FORCE_SSL_ADMIN', true);
 
 
