@@ -1,0 +1,9 @@
+FROM bitnami/wordpress:latest
+
+# Create a user with UID 1001 (common non-root user ID)
+RUN useradd -u 1001 -G root -d /bitnami/wordpress -s /bin/bash wordpressuser && \
+    mkdir -p /bitnami/wordpress && \
+    chown -R wordpressuser:root /bitnami/wordpress && \
+    chmod -R 775 /bitnami/wordpress
+
+USER wordpressuser
