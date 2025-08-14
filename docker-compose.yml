@@ -1,5 +1,5 @@
 services:
-  ezl:
+  ezl_Clients:
     image: bitnami/wordpress:latest
     env_file: .env
     ports:
