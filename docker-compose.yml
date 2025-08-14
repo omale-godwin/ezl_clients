@@ -33,7 +33,7 @@ services:
     networks:
       - wordpress-network
     volumes:
-      - ./wordpress-ezl:/bitnami/wordpress
+      - ./wordpress-ezl_Clients:/bitnami/wordpress
   rubicon:
     image: bitnami/wordpress:latest
     env_file: .env
@@ -68,7 +68,7 @@ services:
     networks:
       - wordpress-network
     volumes:
-      - ./wordpress-ezl:/bitnami/wordpress
+      - ./wordpress-rubicon:/bitnami/wordpress
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
