@@ -123,9 +123,15 @@ networks:
   wordpress-network:
     driver: bridge
 volumes:
-  wordpress-ezl:
+  ezl_Clients:
     driver: local
     driver_opts:
       type: none
-      device: ./wordpress-ezl
+      device: ./ezl_Clients
+      o: bind
+  rubicon:
+    driver: local
+    driver_opts:
+      type: none
+      device: ./rubicon
       o: bind
