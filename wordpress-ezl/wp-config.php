@@ -48,14 +48,14 @@ define( 'DB_COLLATE', '' );
  *
  * @since 2.6.0
  */
-define( 'AUTH_KEY',         '= DY1Uy!<;nHX~vE#[Q38b;yT@)cT 2hS07*<7TvM5?k2{N%ps-iZJjHtsr)-{gZ' );
-define( 'SECURE_AUTH_KEY',  'P=3qROg`{_4pK7?2Pbehj7!gByu]YR- t]3t$-Zf2mK2QfN^L``u4gjo:h+~OTv(' );
-define( 'LOGGED_IN_KEY',    'sGpxap9[/)*bYQ<ip&[kRh>1T^Mog`/RIc&iPi6]M-K@x0r2#V(v^xM*3,k+nbjH' );
-define( 'NONCE_KEY',        'C`/=^K2#&2B(~dyS> Bb.(f`Z8lbe{P!B;As)_vM,h|dkrUl<BJ;t !*E^`jk.m-' );
-define( 'AUTH_SALT',        'k|c*Xlemz.@[DV$^KT|``lcyQt#!AqQOwy60n;|3h&I;7V89}y{{+Q<s4^Fp;Mp/' );
-define( 'SECURE_AUTH_SALT', 'tgFhmg>g`ur!SG]{d)3DQ@G#-WM:c>XJ&97Ry|[<T4ph^3TfDywfjy(HMhm*TshM' );
-define( 'LOGGED_IN_SALT',   'enh_y,a5BY?wwX+lDcuwQaIbM/mF[qx.`n9|WkI>.|{&4L-P-sy?U.;otvc{*-1s' );
-define( 'NONCE_SALT',       '#tnv*1-U).S~Jas*v9L{8&Gt396`#vbnsw@mZVtzA&XD5qZ(eS%QAN2j~A{8(n*C' );
+define( 'AUTH_KEY',         'm&=9keHtsMp%PWh?V~VeU~TH]yv7@1,vbZVPze$n+ 0uB()?5p6vR&.I)Y^1-_,}' );
+define( 'SECURE_AUTH_KEY',  'uKU$(h5JNhzPKE`o;r(/!JfP;7}z^k_Ugi*Et*OvOlz0bud({4%Eh6mc}.5Y;F~1' );
+define( 'LOGGED_IN_KEY',    'SGyE$rMhRU6vH&s*2w%9pK+o,T=r/S!~+NvqT3}@eM)ZWTZxT2FyWd$Pp%%3`k54' );
+define( 'NONCE_KEY',        '3t;:ur8pQ{9RD_wZ:z$N+wl}W]RO,%~]z0~I?,xmoE<M9&EFI87bKxem$%%AW!Ez' );
+define( 'AUTH_SALT',        '@nZiU`2jA!qtkSEU(#NRr$D0J/iEiy<tJfxN5BsgL>DnC^0uV<pF8jb|-uG|RySt' );
+define( 'SECURE_AUTH_SALT', 'za@OM~(=AlMYFzRf{L1rdre3P>6=q6_Y1`9so#`;3.u$h8Av|5M*!_w*pZof!_M_' );
+define( 'LOGGED_IN_SALT',   'bQ.dHRI8+u;$=p3?08!thpe{$UI%ZMfb6a3jMpH<_0ty<O4;a*X Hu~lM,~R]@J0' );
+define( 'NONCE_SALT',       ']qCoT,o(6-?;s%%8](/q?#wddmbVM9;i|Xp{2_u!YKog7|/V#E}y5B Lb^$%#D)d' );
 
 /**#@-*/
 
@@ -103,17 +103,6 @@ define( 'DOMAIN_CURRENT_SITE', 'merkaba.site' );
 define( 'PATH_CURRENT_SITE', '/' );
 define( 'SITE_ID_CURRENT_SITE', 1 );
 define( 'BLOG_ID_CURRENT_SITE', 1 );
-
-
-
-
-
-
-// Increase memory limit
-define('WP_MEMORY_LIMIT', '256M');
-define('WP_MAX_MEMORY_LIMIT', '512M');
-
-define('COOKIE_DOMAIN', '.merkaba.site');  // For shared login
 
 /* That's all, stop editing! Happy publishing. */
 

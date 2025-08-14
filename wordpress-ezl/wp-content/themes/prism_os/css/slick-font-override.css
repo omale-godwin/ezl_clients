@@ -1,0 +1,11 @@
+@font-face {
+  font-family: 'slick';
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; /* This fixes the problem */
+  src: url('/wp-content/themes/eo-theme/slick/fonts/slick.eot');
+  src: url('/wp-content/themes/eo-theme/slick/fonts/slick.eot?#iefix') format('embedded-opentype'),
+       url('/wp-content/themes/eo-theme/slick/fonts/slick.woff') format('woff'),
+       url('/wp-content/themes/eo-theme/slick/fonts/slick.ttf') format('truetype'),
+       url('/wp-content/themes/eo-theme/slick/fonts/slick.svg#slick') format('svg');
+}

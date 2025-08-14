@@ -1,0 +1,247 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/poppins/Poppins-Regular.woff2') format('woff2'),
+         url('../fonts/poppins/Poppins-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/poppins/Poppins-SemiBold.woff2') format('woff2'),
+         url('../fonts/poppins/Poppins-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/poppins/Poppins-Bold.woff2') format('woff2'),
+         url('../fonts/poppins/Poppins-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/inter/Inter-Regular.woff2') format('woff2'),
+         url('../fonts/inter/Inter-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/inter/Inter-SemiBold.woff2') format('woff2'),
+         url('../fonts/inter/Inter-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/inter/Inter-Bold.woff2') format('woff2'),
+         url('../fonts/inter/Inter-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+  font-family: 'Qwigley';
+  src: url('../fonts/qwigley/Qwigley-Regular.woff2') format('woff2'),
+       url('../fonts/qwigley/Qwigley-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+.pt-0{
+    padding-top: 0px;
+}
+.pb-0{
+    padding-bottom: 0px;
+}
+.d-flex{
+    display: flex;
+}
+.justify-content{
+    justify-content: space-between;
+}
+.align-items{
+    align-items: center;
+}
+.gap-8{
+    gap: 8px;
+}
+.gap-16{
+    gap: 16px;
+}
+.gap-24{
+    gap: 24px;
+}
+.gap-48{
+    gap: 48px;
+}
+.mt-8{
+    margin-top: 8px;
+}
+.mt-16{
+    margin-top: 16px;
+}
+.mb-16{
+    margin-bottom: 16px !important;
+}
+.mb-24{
+    margin-bottom: 24px;
+}
+.mt-24{
+    margin-top: 24px;
+}
+.mt-48{
+    margin-top: 48px;
+}
+.text-left{
+    text-align: left !important;
+}
+.font-w-700{
+    font-weight: 700 !important;
+}
+/* color */
+.yellow-color{
+    color: #FFAB23;
+}
+
+/* Button */
+.white-button {
+    background: #fff;
+    border: 1px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: max-content;
+    padding: 16px 32px;
+    border-radius: 38px;
+    font-family: Poppins;
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 14px;
+    line-height: 150%;
+    color: #A40F00;
+}
+.black-button {
+    background: #000;
+    border: 1px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: max-content;
+    padding: 16px 32px;
+    border-radius: 38px;
+    font-family: Poppins;
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 14px;
+    line-height: 150%;
+    color: #fff;
+}
+.red-button {
+    background: #E61F00;
+    border: 1px solid #E61F00;
+    /* height: 65px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: max-content;
+    padding: 22px 44px;
+    border-radius: 38px;
+    font-family: Poppins;
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 14px;
+    line-height: 150%;
+    color: #fff;
+}
+.transparent-button{
+    background: transparent;
+    /* height: 65px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: max-content;
+    padding: 22px 44px;
+    border-radius: 38px;
+    font-family: Poppins;
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 14px;
+    line-height: 150%;
+    color: #fff;
+    border: 1px solid #fff;
+}
+.red-button2 {
+    background: #E61F00;
+    border: 1px solid #E61F00;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: max-content;
+    padding: 16px 32px;
+    border-radius: 38px;
+    font-family: Poppins;
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 14px;
+    line-height: 150%;
+    color: #fff;
+}
+.transparent-button2{
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: max-content;
+    padding: 16px 32px;
+    border-radius: 38px;
+    font-family: Poppins;
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 14px;
+    line-height: 150%;
+    color: #fff;
+    border: 1px solid #fff;
+}
+.header-content h2{
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: 28%;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FAFF65;
+    margin-bottom: 16px;
+}
+.header-content h3{
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 58px;
+    text-align: center;
+    margin-bottom: 24px;
+    color: #fff;
+    letter-spacing: -0.02em;
+}
+.header-content p {
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+    color: #F2F4FC;
+    max-width: 726px;
+    margin: 0 auto;
+    letter-spacing: 0.03em;;
+}
+.header-content p.custom-maxwidth{
+    width: 100%;
+    max-width: 100%;
+}
