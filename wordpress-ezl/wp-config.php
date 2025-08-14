@@ -104,6 +104,12 @@ define( 'PATH_CURRENT_SITE', '/' );
 define( 'SITE_ID_CURRENT_SITE', 1 );
 define( 'BLOG_ID_CURRENT_SITE', 1 );
 
+
+define('WP_HOME', 'https://merkaba.site');
+define('WP_SITEURL', 'https://merkaba.site');
+define('FORCE_SSL_ADMIN', true);
+
+
 /* That's all, stop editing! Happy publishing. */
 
 /** Absolute path to the WordPress directory. */
