@@ -4,7 +4,7 @@ services:
     env_file: .env
     ports:
       - "9092:8080"
-      - "9443:8443"
+      - "443:8443"
     environment:
       - WORDPRESS_DATABASE_HOST=${MYSQL_HOST}
       - WORDPRESS_DATABASE_PORT_NUMBER=${PORT}
@@ -34,7 +34,7 @@ services:
     networks:
       - wordpress-network
     volumes:
-      - ./wordpress-ezl_Clients:/bitnami/wordpress
+      - ./ezl_Clients:/bitnami/wordpress
   
 
   rubicon:
@@ -88,16 +88,7 @@ services:
 networks:
   wordpress-network:
     driver: bridge
-volumes:
-  ezl_Clients:
-    driver: local
-    driver_opts:
-      type: none
-      device: ./ezl_Clients
-      o: bind
-  rubicon:
-    driver: local
-    driver_opts:
-      type: none
-      device: ./rubicon
-      o: bind
+
+
+
+ 
