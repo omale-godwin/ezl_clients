@@ -41,7 +41,6 @@ services:
   
 
   rubicon:
-    
     env_file: .env
     ports:
       - "9095:8080"
