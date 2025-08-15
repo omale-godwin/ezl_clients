@@ -1,26 +1,21 @@
+
+
 services:
-  ezl_Clients:
+  ourwork:
     image: bitnami/wordpress:latest
     env_file: .env
     ports:
-      - "9092:8080"
-      - "443:8443"
+      - "9092:8080" 
+      - "9443:8443" 
     environment:
       - WORDPRESS_DATABASE_HOST=${MYSQL_HOST}
       - WORDPRESS_DATABASE_PORT_NUMBER=${PORT}
-      - WORDPRESS_DATABASE_NAME=${MYSQL_DATABASE_EZL_PROD}
+      - WORDPRESS_DATABASE_NAME=${MYSQL_DATABASE1}
       - WORDPRESS_DATABASE_USER=${MYSQL_USER}
       - WORDPRESS_MULTISITE_FILEUPLOAD_MAXK=210000
       - WORDPRESS_DATABASE_PASSWORD=${MYSQL_PASSWORD}
-      - WORDPRESS_ENABLE_MULTISITE=yes
-      - BITNAMI_DEBUG=true
-      - WORDPRESS_MULTISITE_HOST=${MAIN_DOMAIN}
-      - WORDPRESS_MULTISITE_WILDCARD=yes
-      - WORDPRESS_SKIP_INSTALL=no
       - COMPOSER_ALLOW_SUPERUSER=1
-      - WORDPRESS_DATA_TO_PERSIST=/bitnami/wordpress
-
-    user: root 
+    user: root
     deploy:
       resources:
         limits:
@@ -36,29 +31,24 @@ services:
     networks:
       - wordpress-network
     volumes:
-      - ./ezl_Clients:/bitnami/wordpress
+      - ./wordpress-ourwork:/bitnami/wordpress
 
-  
 
-  rubicon:
-    
+  blog:
+    image: bitnami/wordpress:latest
     env_file: .env
     ports:
-      - "9095:8080"
-      - "9445:8443"
+      - "9093:8080"  
+      - "9444:8443"  
     environment:
       - WORDPRESS_DATABASE_HOST=${MYSQL_HOST}
       - WORDPRESS_DATABASE_PORT_NUMBER=${PORT}
-      - WORDPRESS_DATABASE_NAME=${MYSQL_DATABASE_RUBICON_PROD}
-      - WORDPRESS_DATABASE_USER=${MYSQL_USER}
+      - WORDPRESS_DATABASE_NAME=${MYSQL_DATABASE2}
       - WORDPRESS_MULTISITE_FILEUPLOAD_MAXK=210000
+      - WORDPRESS_DATABASE_USER=${MYSQL_USER}
       - WORDPRESS_DATABASE_PASSWORD=${MYSQL_PASSWORD}
-      - WORDPRESS_ENABLE_MULTISITE=yes
-      - WORDPRESS_MULTISITE_HOST=${MAIN_DOMAIN_RUBICON}
-      - WORDPRESS_MULTISITE_WILDCARD=yes
-      - WORDPRESS_SKIP_INSTALL=no
       - COMPOSER_ALLOW_SUPERUSER=1
-    user: root 
+    user: root
     deploy:
       resources:
         limits:
@@ -74,39 +64,55 @@ services:
     networks:
       - wordpress-network
     volumes:
-      - ./rubicon:/bitnami/wordpress
+      - ./wordpress-blog:/bitnami/wordpress
 
+  insights:
+    image: bitnami/wordpress:latest
+    env_file: .env
+    ports:
+      - "9593:8080" 
+      - "9555:8443" 
+    environment:
+      - WORDPRESS_DATABASE_HOST=${MYSQL_HOST}
+      - WORDPRESS_DATABASE_PORT_NUMBER=${PORT}
+      - WORDPRESS_DATABASE_NAME=${MYSQL_DATABASE3}
+      - WORDPRESS_DATABASE_USER=${MYSQL_USER}
+      - WORDPRESS_MULTISITE_FILEUPLOAD_MAXK=210000
+      - WORDPRESS_DATABASE_PASSWORD=${MYSQL_PASSWORD}
+      - COMPOSER_ALLOW_SUPERUSER=1
+    user: root
+    networks:
+      - wordpress-network
+    volumes:
+      - ./wordpress-insights:/bitnami/wordpress
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
     restart: unless-stopped
     ports:
-      - 8085:80
+      - 8081:80
     env_file: .env
     environment:
       PMA_HOST: '${MYSQL_HOST}'
       MYSQL_ROOT_PASSWORD: '${MYSQL_PASSWORD}'
     networks:
       - wordpress-network
+
 networks:
   wordpress-network:
     driver: bridge
 
 volumes:
-  ezl_Clients:
+  wordpress-ourwork:
     driver: local
     driver_opts:
       type: none
-      device: ./ezl_Clients
+      device: ./wordpress-ourwork
       o: bind
 
-  rubicon:
+  wordpress-blog:
     driver: local
     driver_opts:
       type: none
-      device: ./rubicon
+      device: ./wordpress-blog
       o: bind
-
-
-
- 
