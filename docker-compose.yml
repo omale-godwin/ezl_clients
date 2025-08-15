@@ -41,6 +41,7 @@ services:
   
 
   rubicon:
+    image: bitnami/wordpress:latest
     env_file: .env
     ports:
       - "9095:8080"
