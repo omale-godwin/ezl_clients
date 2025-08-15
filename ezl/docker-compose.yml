@@ -38,41 +38,41 @@ services:
 
   
 
-  rubicon:
-    image: bitnami/wordpress:latest
-    env_file: .env
-    ports:
-      - "9095:8080"
-      - "9445:8443"
-    environment:
-      - WORDPRESS_DATABASE_HOST=${MYSQL_HOST}
-      - WORDPRESS_DATABASE_PORT_NUMBER=${PORT}
-      - WORDPRESS_DATABASE_NAME=${MYSQL_DATABASE_RUBICON}
-      - WORDPRESS_DATABASE_USER=${MYSQL_USER}
-      - WORDPRESS_MULTISITE_FILEUPLOAD_MAXK=210000
-      - WORDPRESS_DATABASE_PASSWORD=${MYSQL_PASSWORD}
-      - WORDPRESS_ENABLE_MULTISITE=yes
-      - WORDPRESS_MULTISITE_HOST=${MAIN_DOMAIN_RUBICON}
-      - WORDPRESS_MULTISITE_WILDCARD=yes
-      - WORDPRESS_SKIP_INSTALL=no
-      - COMPOSER_ALLOW_SUPERUSER=1
-    user: root 
-    deploy:
-      resources:
-        limits:
-          cpus: '1'
-          memory: 1G
-        reservations:
-          memory: 512M
-    healthcheck:
-      test: ["CMD-SHELL", "curl -f http://localhost:8080 || exit 1"]
-      interval: 30s
-      timeout: 10s
-      retries: 3
-    networks:
-      - wordpress-network
-    volumes:
-      - ./rubicon:/bitnami/wordpress
+  # rubicon:
+  #   image: bitnami/wordpress:latest
+  #   env_file: .env
+  #   ports:
+  #     - "9095:8080"
+  #     - "9445:8443"
+  #   environment:
+  #     - WORDPRESS_DATABASE_HOST=${MYSQL_HOST}
+  #     - WORDPRESS_DATABASE_PORT_NUMBER=${PORT}
+  #     - WORDPRESS_DATABASE_NAME=${MYSQL_DATABASE_RUBICON}
+  #     - WORDPRESS_DATABASE_USER=${MYSQL_USER}
+  #     - WORDPRESS_MULTISITE_FILEUPLOAD_MAXK=210000
+  #     - WORDPRESS_DATABASE_PASSWORD=${MYSQL_PASSWORD}
+  #     - WORDPRESS_ENABLE_MULTISITE=yes
+  #     - WORDPRESS_MULTISITE_HOST=${MAIN_DOMAIN_RUBICON}
+  #     - WORDPRESS_MULTISITE_WILDCARD=yes
+  #     - WORDPRESS_SKIP_INSTALL=no
+  #     - COMPOSER_ALLOW_SUPERUSER=1
+  #   user: root 
+  #   deploy:
+  #     resources:
+  #       limits:
+  #         cpus: '1'
+  #         memory: 1G
+  #       reservations:
+  #         memory: 512M
+  #   healthcheck:
+  #     test: ["CMD-SHELL", "curl -f http://localhost:8080 || exit 1"]
+  #     interval: 30s
+  #     timeout: 10s
+  #     retries: 3
+  #   networks:
+  #     - wordpress-network
+  #   volumes:
+  #     - ./rubicon:/bitnami/wordpress
 
 
   phpmyadmin:
@@ -98,12 +98,7 @@ volumes:
       device: ./ezl_Clients
       o: bind
 
-  rubicon:
-    driver: local
-    driver_opts:
-      type: none
-      device: ./rubicon
-      o: bind
+
 
 
 
