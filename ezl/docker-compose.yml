@@ -32,7 +32,7 @@ services:
       timeout: 10s
       retries: 3
     networks:
-      - wordpress-network
+      - wordpress-network-ezl
     volumes:
       - ./ezl_Clients:/bitnami/wordpress
 
@@ -75,20 +75,6 @@ services:
   #     - ./rubicon:/bitnami/wordpress
 
 
-  phpmyadmin:
-    image: phpmyadmin/phpmyadmin
-    restart: unless-stopped
-    ports:
-      - 8085:80
-    env_file: .env
-    environment:
-      PMA_HOST: '${MYSQL_HOST}'
-      MYSQL_ROOT_PASSWORD: '${MYSQL_PASSWORD}'
-    networks:
-      - wordpress-network
-networks:
-  wordpress-network:
-    driver: bridge
 
 volumes:
   ezl_Clients:
